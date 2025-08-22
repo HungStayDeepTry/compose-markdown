@@ -4,7 +4,7 @@ A lightweight Jetpack Compose library for rendering GitHub-flavored Markdown (GF
 
 ## 📸 Preview
 
-![Preview Image]https://hungstaydeeptry.github.io/Screenshot_20250822_175237.png
+![Preview Image] https://hungstaydeeptry.github.io/Screenshot_20250822_175237.png
 
 ## 🚀 Example Code
 
