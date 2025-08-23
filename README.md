@@ -2,6 +2,8 @@
 
 A lightweight Jetpack Compose library for rendering GitHub-flavored Markdown (GFM) on Android. Supports headings, paragraphs, lists, tables, quotes, images, links, code blocks, inline styles, and more.
 
+Built on top of [CommonMark Java](https://github.com/commonmark/commonmark-java) parser.
+
 ## 📸 Preview
 
 <img src="https://hungstaydeeptry.github.io/Screenshot_20250822_175237.png" alt="Preview Image" width="300"/>
@@ -79,6 +81,13 @@ dependencies {
 - **Tables** → Equalized column widths with border & alignment
 - **Links** → Blue + underlined, clickable via onLinkClicked
 
+## 📚 Dependencies
+
+This library uses the following open-source components:
+
+- [CommonMark Java](https://github.com/commonmark/commonmark-java) - BSD 2-Clause License
+- [CommonMark GFM Extensions](https://github.com/commonmark/commonmark-java) - BSD 2-Clause License
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit issues and pull requests to improve the library.
@@ -86,3 +95,7 @@ Contributions are welcome! Feel free to submit issues and pull requests to impro
 ## 📜 License
 
 This project is licensed under the MIT License.
+
+### Third-party Licenses
+
+- CommonMark Java is licensed under the BSD 2-Clause License. See [CommonMark License](https://github.com/commonmark/commonmark-java/blob/main/LICENSE.txt)
