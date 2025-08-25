@@ -3,10 +3,16 @@ package hung.dev.markdownrenderer
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -62,18 +68,29 @@ class MainActivity : ComponentActivity() {
                         | This is an image ![UIA_wtm](https://ih1.redbubble.net/image.5763372730.4107/st,small,507x507-pad,600x600,f8f8f8.jpg)    | right bar     |
                         | left baz      | right baz     |
                     """.trimIndent()
-
-                    Markdown(
-                        text = markdownText,
-                        styles = MarkdownStyles.default(),
-                        modifier = Modifier.padding(start = 8.dp),
-                        imageResolver = { url, alt, title ->
-                            AsyncImage(
-                                model = url,
-                                contentDescription = null
-                            )
+                    Column(
+                        Modifier
+                            .fillMaxSize()
+                            .verticalScroll(rememberScrollState())
+                            .horizontalScroll(rememberScrollState())
+                    ) {
+                        Markdown(
+                            text = markdownText,
+                            styles = MarkdownStyles.default(),
+                            modifier = Modifier
+                                .padding(start = 8.dp)
+                                .wrapContentSize(),
+                            imageResolver = { url, alt, title ->
+                                AsyncImage(
+                                    model = url,
+                                    contentDescription = null
+                                )
+                            }
+                        )
+                        Column() {
+                            Text("czxczxczxczxczxczxczxczxczxcz")
                         }
-                    )
+                    }
                 }
             }
         }
